@@ -28,3 +28,4 @@ In case this set of instructions were not clear, please refer to this youtube tu
 
 ### 2. Setting up a new environment
 
+Next, 
