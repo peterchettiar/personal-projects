@@ -45,11 +45,11 @@ conda list --export > base_environment.yml
 **2.2 Edit the yaml file**
 
 At this point the output from the previous command should be in your current working directory. You can open it up and make these changeson the yaml file:
-- name : You can specify the name of the new environement
-- channels : Typically I keep this as default
-- dependencies : Usually the particular version of each library maybe outdated, especially when you export it from some other environment. So what I like to do is to remove the versions using regex (like `(=).*`, and do a find and replace), and maybe include or remove additional packages as per your project requirement
-- pip : I've included a pip dictionary in the dependancies section to specify packages that I want to install using `pip` instead of `conda`
-- prefix : Lastly, this is where I specify the location of where the venv should be installed, for this I would always specify the location of the project
+- `name` : You can specify the name of the new environement
+- `channels` : Typically I keep this as default
+- `dependencies` : Usually the particular version of each library maybe outdated, especially when you export it from some other environment. So what I like to do is to remove the versions using regex (like `(=).*`, and do a find and replace), and maybe include or remove additional packages as per your project requirement
+- `pip` : I've included a pip dictionary in the dependancies section to specify packages that I want to install using `pip` instead of `conda`
+- `prefix` : Lastly, this is where I specify the location of where the venv should be installed, for this I would always specify the location of the project
 
 **2.3 Create venv using yaml file**
 
