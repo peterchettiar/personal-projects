@@ -71,13 +71,69 @@ cd '{file path to folder of environment - this can be found from previous comman
 ```
 rm -r venv
 ```
-_Useful github commands_
+_Useful Github Commands_
 
 ```
-git branch - command to check the branch we are on the github page
-git pull - command to pull the latest files from origin (i.e. Github)
-git checkout <branch name you want to move to> - command to change the branch that you are in
-git checkout -b <new branch name> <origin/branch name in github> - command to create a new branch locally that is a copy of a branch on github (and switches to new branch)
-git checkout -b <new branch name> - command to create a new local branch
-git push -u origin <branch> - command to push the local branch to github
+git branch -> command to check the branch we are on the github page
+git pull -> command to pull the latest files from origin (i.e. Github)
+git checkout <branch name you want to move to> -> command to change the branch that you are in
+git checkout -b <new branch name> <origin/branch name in github> -> command to create a new branch locally that is a copy of a branch on github (and switches to new branch)
+git checkout -b <new branch name> -> command to create a new local branch
+git push -u origin <branch> -> command to push the local branch to github
 ```
+_steps to copy changes from main branch on Github into forked-branch in Github_
+
+```
+step 1: git checkout forked-branch 
+step 2: git merge origin/main branch
+step 3: git push
+```
+
+_Alternate way is to:_
+
+```
+step 1: git checkout main branch
+step 2: git pull
+step 3: git checkout forked-branch
+step 4: git merge main branch
+step 4: git push
+```
+
+_steps to push changes_
+
+```
+step 1: git status - command to see the changes that are staged/unstaged
+step 2: git add <file path> - command to move the modified notebooks from unstaged to staged (git add . - the dot adds all the files into staging)
+step 3: git status - this time to check if the modified notebook is in the staging area
+step 4: git commit -m <message> - command to commit to the changes in the staging area
+step 5: git push - command to push the changes
+```
+_Steps for creating new environment_
+
+```
+Step 1: remove unwanted environments
+conda remove -p "path to environment" - command to remove virtual environment
+rm -rf "folder name" - command to remove folders from directory
+conda env remove -n "name of env" - removing environement
+
+Step 2: create new environment for MMM and install the necessary packages
+conda env create -f environment.yml -p /home/jupyter/mmm - command for creating a new enviroment [mmm is the name of the enviroment, -f is filename of yml fil (that contains the packages we want to install) and this should be in the main directory and -p is the path in which the environemt should be installed]
+
+Step 3: activate new enviroment
+conda env list - command to list the environments (this is to check if the new environment was created properly)
+nano .bashrc - command to set the newly created mmm env as default env --> type conda activate "path to new environment"
+python -m ipykernal install --user --name ""name of env" --display-name "name of kernal you want to see in notebook" - command to create and link new env kernal in jupyter notebook
+
+Step 4: installing new libraries into new env
+conda list - command to check the libraries 
+pip install "library" on terminal
+conda env export > environment.yml - command to export updated libraries list for the next user
+```
+_Random useful terminal Commands_
+
+```
+~/mmm --> tilda refers to home directory
+cp -R <source_folder> <destination_folder> - copy all files recursively from source folder to destination folder (insert path to both folders)
+rm -rf "folder name" - command to remove folders from directory
+git clone <repo url> - command to download latest version of a remote project and copying it to the selected location on the local machine
+git init <repo name> - command to start new empty repo
