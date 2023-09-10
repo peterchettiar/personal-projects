@@ -71,7 +71,7 @@ cd '{file path to folder of environment - this can be found from previous comman
 ```
 rm -r venv
 ```
-## 3. Useful Commands
+## 3. Useful Terminal Commands
 
 3.1 Useful Github Commands
 
