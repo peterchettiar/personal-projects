@@ -54,3 +54,21 @@ At this point the output from the previous command should be in your current wor
 **2.3 Create venv using yaml file**
 
 Now, all we have to do is to run the command `conda env create -f environment.yml` - note that this file should be in the project working directory (as a rule of thumb, anything related to the project should be encapsulated within the said project folder)
+
+
+**2.4 Some useful tips**
+
+_In the event where you want to delete an environment that you created:_
+1. Run this command to see the list of environments as well as their respecitve filepaths
+```
+conda env list
+```
+2. Next run the command `cd` to go to root folder, then run the following command to go to the folder in which the environment you want to delete is located
+```
+cd '{file path to folder of environment - this can be found from previous command}'
+```
+3. Lastly, to delete we need to remove all the files in folder recursively before deleting the folder as follows (make sure to `deactivate` first)
+```
+rm -r venv
+```
+
