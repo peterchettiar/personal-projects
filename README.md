@@ -1,6 +1,6 @@
 # personal-projects
 
-<u>Welcome to Peter's personal project repository!</u>
+**Welcome to Peter's personal project repository!**
 
 > _This a temp repo to help store workflow/raw files for projects that are in WIP_
 
@@ -18,6 +18,11 @@ You just need to keep in mind that the email address used is the same as the one
 
 ![Screenshot 2023-09-10 at 11 59 40 AM](https://github.com/peterchettiar/personal-projects/assets/89821181/1af87c02-559a-411f-b7f5-209dcba26abd)
 
+You would just have to press `ENTER` once for each prompt, and before you know it, you would have created an SSH key!
+
+Next, you would want to copy this SSH key - for this run the following command: `pbcopy < ~/.ssh/id_ed25519.pub`
+
+Once you've done this, you need to proceed to your Github account and click on your profile picture and select settings. Following this, you would need to click on `SSH and GPG Keys` on the left navigation panel, and click on the `New SSH Key` button. This would lead you to a page that requires you to fill in a title for your key as well as copied SSH key into the key box. After you've added the key, your local account would now have an SSH key that is connected to your github account. Now that we have the access rights for cloning the git hub repo - we run the command `git clone git@github.com:peterchettiar/personal-projects.git` to do just that!
 
 ### 2. Setting up a new environment
 
