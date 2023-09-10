@@ -71,7 +71,9 @@ cd '{file path to folder of environment - this can be found from previous comman
 ```
 rm -r venv
 ```
-_Useful Github Commands_
+## 3. Useful Commands
+
+3.1 Useful Github Commands
 
 ```
 git branch -> command to check the branch we are on the github page
@@ -81,7 +83,7 @@ git checkout -b <new branch name> <origin/branch name in github> -> command to c
 git checkout -b <new branch name> -> command to create a new local branch
 git push -u origin <branch> -> command to push the local branch to github
 ```
-_steps to copy changes from main branch on Github into forked-branch in Github_
+3.2 steps to copy changes from main branch on Github into forked-branch in Github
 
 ```
 step 1: git checkout forked-branch 
@@ -99,7 +101,7 @@ step 4: git merge main branch
 step 4: git push
 ```
 
-_steps to push changes_
+3.3 steps to push changes
 
 ```
 step 1: git status - command to see the changes that are staged/unstaged
@@ -108,7 +110,8 @@ step 3: git status - this time to check if the modified notebook is in the stagi
 step 4: git commit -m <message> - command to commit to the changes in the staging area
 step 5: git push - command to push the changes
 ```
-_Steps for creating new environment_
+
+3.4 Steps for creating new environment
 
 ```
 Step 1: remove unwanted environments
@@ -129,7 +132,8 @@ conda list - command to check the libraries
 pip install "library" on terminal
 conda env export > environment.yml - command to export updated libraries list for the next user
 ```
-_Random useful terminal Commands_
+
+3.5 Random useful terminal Commands
 
 ```
 ~/mmm --> tilda refers to home directory
