@@ -12,7 +12,7 @@ This is probably not needed when you start on a new project given that the under
 
 1.1 Generating SSH Key
 
-Before cloning the repo to your local directory, you need to make sure that you have the correct access rights before cloning. So once you've `cd` into the directory in which you want to clone the repo to, run the termical command `ssh-keygen -t ed25519 -C "your_email@example.com` to generate your SSH key - You can find the commands and more detailed explanation of doing so here ->[https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+Before cloning the repo to your local directory, you need to make sure that you have the correct access rights before cloning. So once you've `cd` into the directory in which you want to clone the repo to, run the termical command `ssh-keygen -t ed25519 -C "your_email@example.com"` to generate your SSH key - You can find the commands and more detailed explanation of doing so here ->[https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 ](url)
 ### 2. Setting up a new environment
 
