@@ -10,7 +10,7 @@
 
 This is probably not needed when you start on a new project given that the underlying assumption is that you already have your github repo connected to local IDE - in my case I like to use VS Code. To be honest, I'm probably writing this section to get into the habit of writing documentation, especially a README file, as this is often the most overlooked part of the project process. Mostly because this is the more mundane and less interesing phase of the project. But enought chit-chat, time to fill this page up to make it look less sad while also getting into the process of familiarising the syntax of writing such documentations.
 
-1.1 Generating SSH Key
+**1.1 Generating SSH Key**
 
 Before cloning the repo to your local directory, you need to make sure that you have the correct access rights before cloning. So once you've `cd` into the directory in which you want to clone the repo to, run the terminal command `ssh-keygen -t ed25519 -C "your_email@example.com"` to generate your SSH key - You can find the commands and more detailed explanation of doing so here: [Generating a new SSH key and adding it to the ssh-agent](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
@@ -30,9 +30,27 @@ In case this set of instructions were not clear, please refer to this youtube tu
 
 Next, we want to set up a virtual environment with dependancies that are specific to the project. This is often deemed as good or standard practice when starting a new project. So, the steps of doing so are as follows:
 
-2.1 We first need to create a environment.yml file that contains all the dependancies - to keep things simple, I had created a yml file that contained all the libraries that I had on my base environment. Over the years in University, I had curated all the various libraries in the base environment of my laptop (it was a time where I had not learnt of the standard practice of creating venv). So, pretty much what I like to do is load this standard .yml file and delete the dependancies that I don't need, and install them to my new venv. If you find yourself in a similar predicament, create your yaml file using the following steps:
+**2.1 Create environment.yml**
+
+We first need to create a environment.yml file that contains all the dependancies - to keep things simple, I had created a yaml file that contained all the libraries that I had on my base environment. Over the years in University, I had curated all the various libraries in the base environment of my laptop (it was a time where I had not learnt of the standard practice of creating venv). So, pretty much what I like to do is load this standard .yml file and delete the dependancies that I don't need, and install them to my new venv. If you find yourself in a similar predicament, create your yaml file using the following steps:
    
-   2.1.1 Run the following command to activate your base environment
-   ```
-   conda activate base 
-   ```
+**2.1.1 Run the following command to activate your base environment**
+```
+conda activate base 
+```
+**2.1.2 Then run the following command to export the dependencies to a yaml file**
+```
+conda list --export > base_environment.yml
+```
+**2.2 Edit the yaml file**
+
+At this point the output from the previous command should be in your current working directory. You can open it up and make these changeson the yaml file:
+- name : You can specify the name of the new environement
+- channels : Typically I keep this as default
+- dependencies : Usually the particular version of each library maybe outdated, especially when you export it from some other environment. So what I like to do is to remove the versions using regex (like `(=).*`, and do a find and replace), and maybe include or remove additional packages as per your project requirement
+- pip : I've included a pip dictionary in the dependancies section to specify packages that I want to install using `pip` instead of `conda`
+- prefix : Lastly, this is where I specify the location of where the venv should be installed, for this I would always specify the location of the project
+
+**2.3 Create venv using yaml file**
+
+Now, all we have to do is to run the command `conda env create -f environment.yml` - note that this file should be in the project working directory (as a rule of thumb, anything related to the project should be encapsulated within the said project folder)
