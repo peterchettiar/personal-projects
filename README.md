@@ -8,11 +8,11 @@
 
 ### 1. Cloning of repository
 
-This is probably not needed when you start on a new project given that the underlying assumption is that you already have your github repo connected to local IDE - in my case I like to use VS Code. To be honest, I'm probably writing this section to get into the habit of writing documentation, especially as a README file, as this is often the most overlooked part of the project process. Mostly because this is the more mundane and less interesing phase of the project. But enought chit-chat, time to fill this page up to make it look less sad while also getting into the process familirisng the syntax of writing such documentation.
+This is probably not needed when you start on a new project given that the underlying assumption is that you already have your github repo connected to local IDE - in my case I like to use VS Code. To be honest, I'm probably writing this section to get into the habit of writing documentation, especially a README file, as this is often the most overlooked part of the project process. Mostly because this is the more mundane and less interesing phase of the project. But enought chit-chat, time to fill this page up to make it look less sad while also getting into the process of familiarising the syntax of writing such documentations.
 
 1.1 Generating SSH Key
 
-Before cloning the repo to your local directory, you need to make sure that you have the correct access rights before cloning. So once you've `cd` into the directory in which you want to clone the repo to, run the termical command `ssh-keygen -t ed25519 -C "your_email@example.com"` to generate your SSH key - You can find the commands and more detailed explanation of doing so here: [Generating a new SSH key and adding it to the ssh-agent](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+Before cloning the repo to your local directory, you need to make sure that you have the correct access rights before cloning. So once you've `cd` into the directory in which you want to clone the repo to, run the terminal command `ssh-keygen -t ed25519 -C "your_email@example.com"` to generate your SSH key - You can find the commands and more detailed explanation of doing so here: [Generating a new SSH key and adding it to the ssh-agent](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
 You just need to keep in mind that the email address used is the same as the one used to log in to your Github account. Next, once you run the above command, you would be prompted the following three questions:
 
@@ -28,4 +28,11 @@ In case this set of instructions were not clear, please refer to this youtube tu
 
 ### 2. Setting up a new environment
 
-Next, 
+Next, we want to set up a virtual environment with dependancies that are specific to the project. This is often deemed as good or standard practice when starting a new project. So, the steps of doing so are as follows:
+
+2.1 We first need to create a environment.yml file that contains all the dependancies - to keep things simple, I had created a yml file that contained all the libraries that I had on my base environment. Over the years in University, I had curated all the various libraries in the base environment of my laptop (it was a time where I had not learnt of the standard practice of creating venv). So, pretty much what I like to do is load this standard .yml file and delete the dependancies that I don't need, and install them to my new venv. If you find yourself in a similar predicament, create your yaml file using the following steps:
+   
+   2.1.1 Run the following command to activate your base environment
+   ```
+   conda activate base 
+   ```
