@@ -24,5 +24,7 @@ Next, you would want to copy this SSH key - for this run the following command: 
 
 Once you've done this, you need to proceed to your Github account and click on your profile picture and select settings. Following this, you would need to click on `SSH and GPG Keys` on the left navigation panel, and click on the `New SSH Key` button. This would lead you to a page that requires you to fill in a title for your key as well as copied SSH key into the key box. After you've added the key, your local account would now have an SSH key that is connected to your github account. Now that we have the access rights for cloning the git hub repo - we run the command `git clone git@github.com:peterchettiar/personal-projects.git` to do just that!
 
+In case this set of instructions were not clear, please refer to this youtube tutorial : ([How to setup SSH for Github repository]([url](https://www.youtube.com/watch?v=snCP3c7wXw0)https://www.youtube.com/watch?v=snCP3c7wXw0))
+
 ### 2. Setting up a new environment
 
