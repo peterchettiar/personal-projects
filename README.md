@@ -113,6 +113,10 @@ step 5: git push - command to push the changes
 
 3.4 Steps for creating new environment
 
+Useful links:
+[Setting up kernels for different virtual environments](https://ipython.readthedocs.io/en/stable/install/kernel_install.html#kernels-for-different-environments)
+[Activating automatically new conda environment](https://devicetests.com/conda-environment-activation-ubuntu)
+
 ```
 Step 1: remove unwanted environments
 conda remove -p "path to environment" - command to remove virtual environment
