@@ -81,7 +81,7 @@ git pull -> command to pull the latest files from origin (i.e. Github)
 git checkout <branch name you want to move to> -> command to change the branch that you are in
 git checkout -b <new branch name> <origin/branch name in github> -> command to create a new branch locally that is a copy of / tracks a branch on github (and switches to new branch)
 git checkout -b <new branch name> -> command to create a new local branch
-git push -u origin <branch> -> command to push the local branch to github
+git push --set-upstream origin <branch> -> command to push the local branch to github
 ```
 3.2 steps to copy changes from main branch on Github into forked-branch in Github
 
