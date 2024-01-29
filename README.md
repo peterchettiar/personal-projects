@@ -44,7 +44,7 @@ conda list --export > base_environment.yml
 ```
 **2.2 Edit the yaml file**
 
-At this point the output from the previous command should be in your current working directory. You can open it up and make these changeson the yaml file:
+At this point the output from the previous command should be in your current working directory. You can open it up and make these changes on the yaml file:
 - `name` : You can specify the name of the new environement
 - `channels` : Typically I keep this as default
 - `dependencies` : Usually the particular version of each library maybe outdated, especially when you export it from some other environment. So what I like to do is to remove the versions using regex (like `(=).*`, and do a find and replace), and maybe include or remove additional packages as per your project requirement
