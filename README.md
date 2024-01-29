@@ -40,7 +40,7 @@ conda activate base
 ```
 **2.1.2 Then run the following command to export the dependencies to a yaml file**
 ```
-conda list --export > base_environment.yml
+conda env --export > base_environment.yml
 ```
 **2.2 Edit the yaml file**
 
